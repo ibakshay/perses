@@ -26,6 +26,7 @@ var (
 
 type AuthorizationConfig struct {
 	// CheckLatestUpdateInterval that checks if the RBAC cache needs to be refreshed with db content. Only for SQL database setup.
+	// +kubebuilder:validation:Schemaless
 	// +kubebuilder:validation:Type=string
 	// +kubebuilder:validation:Format=duration
 	CheckLatestUpdateInterval model.Duration `json:"check_latest_update_interval,omitempty" yaml:"check_latest_update_interval,omitempty"`

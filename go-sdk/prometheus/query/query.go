@@ -25,6 +25,7 @@ type PluginSpec struct {
 	Datasource       *datasource.Selector `json:"datasource,omitempty" yaml:"datasource,omitempty"`
 	Query            string               `json:"query" yaml:"query"`
 	SeriesNameFormat string               `json:"seriesNameFormat,omitempty" yaml:"seriesNameFormat,omitempty"`
+	// +kubebuilder:validation:Schemaless
 	// +kubebuilder:validation:Type=string
 	// +kubebuilder:validation:Format=duration
 	MinStep    model.Duration `json:"minStep,omitempty" yaml:"minStep,omitempty"`

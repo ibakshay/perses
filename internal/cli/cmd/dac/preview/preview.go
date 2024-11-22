@@ -64,6 +64,7 @@ type option struct {
 	writer     io.Writer
 	errWriter  io.Writer
 	apiClient  api.ClientInterface
+	// +kubebuilder:validation:Schemaless
 	// +kubebuilder:validation:Type=string
 	// +kubebuilder:validation:Format=duration
 	ttl          model.Duration
