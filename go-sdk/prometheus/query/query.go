@@ -25,8 +25,10 @@ type PluginSpec struct {
 	Datasource       *datasource.Selector `json:"datasource,omitempty" yaml:"datasource,omitempty"`
 	Query            string               `json:"query" yaml:"query"`
 	SeriesNameFormat string               `json:"seriesNameFormat,omitempty" yaml:"seriesNameFormat,omitempty"`
-	MinStep          model.Duration       `json:"minStep,omitempty" yaml:"minStep,omitempty"`
-	Resolution       int                  `json:"resolution,omitempty" yaml:"resolution,omitempty"`
+	// +kubebuilder:validation:Type=string
+	// +kubebuilder:validation:Format=duration
+	MinStep    model.Duration `json:"minStep,omitempty" yaml:"minStep,omitempty"`
+	Resolution int            `json:"resolution,omitempty" yaml:"resolution,omitempty"`
 }
 
 type Option func(plugin *Builder) error

@@ -60,10 +60,12 @@ type option struct {
 	opt.FileOption
 	opt.DirectoryOption
 	opt.OutputOption
-	dashboards   []*modelV1.Dashboard
-	writer       io.Writer
-	errWriter    io.Writer
-	apiClient    api.ClientInterface
+	dashboards []*modelV1.Dashboard
+	writer     io.Writer
+	errWriter  io.Writer
+	apiClient  api.ClientInterface
+	// +kubebuilder:validation:Type=string
+	// +kubebuilder:validation:Format=duration
 	ttl          model.Duration
 	ttlAsAString string
 	prefix       string
