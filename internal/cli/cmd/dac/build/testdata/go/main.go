@@ -1,4 +1,4 @@
-// Copyright 2023 The Perses Authors
+// Copyright 2025 The Perses Authors
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -20,7 +20,7 @@ import (
 	"github.com/perses/perses/go-sdk"
 	"github.com/perses/perses/go-sdk/dashboard"
 	"github.com/perses/perses/go-sdk/panel"
-	"github.com/perses/perses/go-sdk/panel-group"
+	panelgroup "github.com/perses/perses/go-sdk/panel-group"
 	listVar "github.com/perses/perses/go-sdk/variable/list-variable"
 	txtVar "github.com/perses/perses/go-sdk/variable/text-variable"
 	promDs "github.com/perses/plugins/prometheus/sdk/go/datasource"

@@ -1,4 +1,4 @@
-// Copyright 2021 The Perses Authors
+// Copyright 2025 The Perses Authors
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -20,7 +20,7 @@ import (
 
 	"github.com/perses/perses/internal/api/dependency"
 	e2eframework "github.com/perses/perses/internal/api/e2e/framework"
-	"github.com/perses/perses/pkg/client/api/v1"
+	v1 "github.com/perses/perses/pkg/client/api/v1"
 	modelAPI "github.com/perses/perses/pkg/model/api"
 	"github.com/stretchr/testify/assert"
 )

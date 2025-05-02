@@ -1,4 +1,4 @@
-// Copyright 2023 The Perses Authors
+// Copyright 2025 The Perses Authors
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -11,11 +11,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { BarChartData, SortOption } from '@perses-dev/components';
-import { DEFAULT_SORT } from './bar-chart-model';
+import { BarChartData, SortOption } from "@perses-dev/components";
+import { DEFAULT_SORT } from "./bar-chart-model";
 
-export function calculatePercentages(data: BarChartData[]): Array<{ label: string; value: number }> {
-  const sum = data.reduce((accumulator, { value }) => accumulator + (value ?? 0), 0);
+export function calculatePercentages(
+  data: BarChartData[]
+): Array<{ label: string; value: number }> {
+  const sum = data.reduce(
+    (accumulator, { value }) => accumulator + (value ?? 0),
+    0
+  );
   return data.map((seriesData) => {
     const percentage = ((seriesData.value ?? 0) / sum) * 100;
     return {
@@ -25,8 +30,11 @@ export function calculatePercentages(data: BarChartData[]): Array<{ label: strin
   });
 }
 
-export function sortSeriesData(data: BarChartData[], sortOrder: SortOption = DEFAULT_SORT): BarChartData[] {
-  if (sortOrder === 'asc') {
+export function sortSeriesData(
+  data: BarChartData[],
+  sortOrder: SortOption = DEFAULT_SORT
+): BarChartData[] {
+  if (sortOrder === "asc") {
     // sort in ascending order by value
     return data.sort((a, b) => {
       if (a.value === null) {

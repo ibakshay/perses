@@ -1,4 +1,4 @@
-// Copyright 2023 The Perses Authors
+// Copyright 2025 The Perses Authors
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -11,19 +11,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { ModeOption, SortOption } from '@perses-dev/components';
-import { CalculationType, DEFAULT_CALCULATION, Definition, FormatOptions } from '@perses-dev/core';
-import { OptionsEditorProps } from '@perses-dev/plugin-system';
+import { ModeOption, SortOption } from "@perses-dev/components";
+import {
+  CalculationType,
+  DEFAULT_CALCULATION,
+  Definition,
+  FormatOptions,
+} from "@perses-dev/core";
+import { OptionsEditorProps } from "@perses-dev/plugin-system";
 
-export const DEFAULT_FORMAT: FormatOptions = { unit: 'decimal', shortValues: true };
-export const DEFAULT_SORT: SortOption = 'desc';
-export const DEFAULT_MODE: ModeOption = 'value';
+export const DEFAULT_FORMAT: FormatOptions = {
+  unit: "decimal",
+  shortValues: true,
+};
+export const DEFAULT_SORT: SortOption = "desc";
+export const DEFAULT_MODE: ModeOption = "value";
 
 /**
  * The schema for a BarChart panel.
  */
 export interface BarChartDefinition extends Definition<BarChartOptions> {
-  kind: 'BarChart';
+  kind: "BarChart";
 }
 
 /**
